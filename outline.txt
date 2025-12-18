@@ -1,0 +1,77 @@
+School IT technology Tracker 
+
+ 
+
+Goal:  
+
+Cli tool of a schools computer inventory and user data 
+
+Select a school,  
+
+Menu will show a selection of data collections 
+
+Data collections include: 
+
+List of computers and users  
+
+Device and user reports  
+
+Search (search for computer names, user names or other strings)  
+
+ 
+
+Actually  
+
+ 
+
+Lets just do a massive directory, we already have Active Directory, but it sucks  
+
+ 
+
+Let’s make a python cli tool which will act as a directory for my organization.  
+
+It’s not going to be fully up to date, why? Because our Active Directory users are based on imports from our HR system. Our HR system is a SaaS which holds the “foundational” employee database, anyone who gets hired paid and fired (when they are fired they disappear) 
+
+HR manages the inputs and outputs of this data, our system administrators then regularly script or manually import that data into our Active Directory system.  
+
+I cannot access that data and do not want to  
+
+This is what I have and can do 
+
+I have a csv of an export from the HR database, it had a name of very employee, position and possibly location. However that data, despite being only a couple months old, is likely very outdated. I have access to Active Directory and could, if needed, export a csv of all users.. 
+
+I want this python app to have its own database, that simply imported the data mentioned previously, and will need to be manually updated if needed.  
+
+ 
+
+The app will need: 
+
+An database of users  
+
+Code that will allow the user to : 
+
+Open the program  
+
+Select different functions such as search, edit and view by school, position etc  
+
+All from command line interface  
+
+ 
+
+User workflow should look like this: 
+
+User open program via command line, such as running the “python main.py” command to “open” the program. From the the program should say “Welcome to SCS python directory (alpha project)  
+
+User will be presented with these menu items:  
+
+Search for user 
+view list of all users 
+view list of users by school
+view list of users by position
+add directory listing 
+remove directory listing 
+exit 
+
+psudo code will be a seperate file 
+
+ 

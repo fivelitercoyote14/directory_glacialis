@@ -1,79 +1,5 @@
 Lets just do a massive directory, we already have Active Directory, but it sucks  
 
-What is explicity is and does:
-- read only directory for quick and easy user look up and manual upkeep of this spicific tools database. 
-mainly for me as practice. the tool will only gain its data via import of data from a CSV. the CSV could 
-be an activedirectory export of all users or my copy of the HR list of all employees. The tool can
-use either the csv itself or a database built for the app to use as its directory database. the database
-can be built if needed and manually inserted with users if needed 
-This tool will not have any connections to active directory or a service we use. it is self 
-contained and isolated 
-Who this is for:
-me a pc tech who doesnt want to enter 4 menus to just verify the first.last spelling of a user
-on a call or in person 
-
-What problems does it solve better than AD?
-nothing it is  worse but its for me to not have to use active directory users and computers, 
-active directory admin center, sccm, or intune. those are sometimes such a pain to use. 
-I want a quick look up method i dont care if I need to manually update it either 
-
-development considerations and plans:
-for now we will use a fake set of people, say 100 made up users, all will have some 
-way to indetify that they are fake users, but I still want them to be in a real school, maybe 
-spread out over a few schools. also they should have varied and realistic names but 
-the positon will be the fake person identifier, fake positions will include:
-"wizard, witch, mage, knight, cleric, santa's_helper"
-NOT A SOURCE of Truth
-NOT A Essential tool for anyone else 
-
-actual task/prompt:
-
-Let’s make a python cli tool which will act as a directory for my organization.  
-
-It’s not going to be fully up to date, why? Because our Active Directory users are based on imports from our HR system. Our HR system is a SaaS which holds the “foundational” employee database, anyone who gets hired paid and fired (when they are fired they disappear) 
-
-HR manages the inputs and outputs of this data, our system administrators then regularly script or manually import that data into our Active Directory system.  
-
-I cannot access that data and do not want to  
-
-This is what I have and can do 
-
-I have a csv of an export from the HR database, it had a name of very employee, position and possibly location. However that data, despite being only a couple months old, is likely very outdated. I have access to Active Directory and could, if needed, export a csv of all users.. 
-
-I want this python app to have its own database, that simply imported the data mentioned previously, and will need to be manually updated if needed.  
-
- 
-
-The app will need: 
-
-An database of users  
-
-Code that will allow the user to : 
-
-Open the program  
-
-Select different functions such as search, edit and view by school, position etc  
-
-All from command line interface  
-
- 
-
-User workflow should look like this: 
-
-User open program via command line, such as running the “python main.py” command to “open” the program. From the the program should say “Welcome to SCS python directory (alpha project)  
-
-User will be presented with these menu items:  
-
-Search for user 
-view list of all users 
-view list of users by school
-view list of users by position
-add directory listing 
-remove directory listing 
-exit 
-
-psudo code will be a seperate file 
-
 further considerations:
 Store last_imported_at for sure and maybe per-record last_verified_at if decided to add later
 
@@ -86,9 +12,3 @@ other user permissions:
 read only for anyone else who decides they want to use this 
 I will be the admin for edits and changes but no one else will really use this
 edit justification will be a comment required 
-
-Where is the DB stored
-this is a tough one 
-for testing the database will be local only but updated via git if that is possible
-if not then thats fine, I can put a database in a shared file server or host it on a 
-pc i use if needed later on. 

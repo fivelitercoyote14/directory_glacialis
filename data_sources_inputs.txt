@@ -1,0 +1,7 @@
+I have a csv of an export from the HR database, it had a name of very employee,
+position and possibly location. However that data, despite being only a couple months old, is likely very outdated. 
+I have access to Active Directory and could, if needed, export a csv of all users.. 
+
+The app will need: 
+
+An database of users  

@@ -1,0 +1,8 @@
+development considerations and plans:
+for now we will use a fake set of people, say 100 made up users, all will have some 
+way to indetify that they are fake users, but I still want them to be in a real school, maybe 
+spread out over a few schools. also they should have varied and realistic names but
+Keep realistic positions
+
+Add a is_fake_record=true field or prefix names like TEST_ / FAKE_
+

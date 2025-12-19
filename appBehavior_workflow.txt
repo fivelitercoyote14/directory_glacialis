@@ -1,0 +1,25 @@
+
+Program Code that will allow the user to : 
+
+Open the program  
+
+Select different functions such as search, edit and view by school, position etc  
+
+All from command line interface  
+
+ 
+
+User workflow should look like this: 
+
+User open program via command line, such as running the “python main.py” command to “open” the program. From the the program should say “Welcome to SCS python directory (alpha project)  
+
+User will be presented with these menu items:  
+
+Search for user 
+view list of all users 
+view list of users by school
+view list of users by position
+Add local record
+Archive record (inactive)
+Annotate/correct record
+exit 

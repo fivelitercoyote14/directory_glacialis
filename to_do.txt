@@ -6,3 +6,22 @@ outline packages
 set up python virtual env 
 set up git ignore 
 create data model info text file 
+TO-DO considerations:
+
+Define search modes:
+
+By name (partial, case-insensitive)
+
+By email/username
+
+By school
+
+By position/job family
+
+By phone/extension
+
+Fuzzy matching vs exact matching (be careful; fuzzy can return wrong people)
+
+And define output formatting:
+
+Minimal output (name, school, title) vs detailed view.

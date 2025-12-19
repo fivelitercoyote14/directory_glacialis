@@ -1,0 +1,9 @@
+
+Where is the DB stored
+this is a tough one 
+for testing the database will be local only but updated via git if that is possible
+if not then thats fine, I can put a database in a shared file server or host it on a 
+pc i use if needed later on. 
+
+expicit stause for users 
+if they no longer work at the organization, then they will be inactive, no need to state reason or date they left 

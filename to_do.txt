@@ -1,3 +1,5 @@
+Write the identity/merge policy
+Write the data dictionary
 write psudo code
 check if outline needs more detail or info 
 write user experince outline maybe

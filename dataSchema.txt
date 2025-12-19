@@ -1,0 +1,49 @@
+a user at minimum is:
+
+name of user | first.last | location | position | 
+
+source data may have more info but the app needs to be built around the above schema 
+
+considerations:
+Unique identifier strategy (critical)
+
+AD: sAMAccountName, userPrincipalName, employeeID (if present), GUID, etc.
+- I guess we will find out when we get the data to fill up the database 
+
+HR export: likely has an employee ID. 
+- not needed for this program use case
+
+Your DB needs a stable key even if names change.
+
+Fields you’ll store
+
+Required vs optional fields (name, preferred name, job title, school, department, phone, email, room, manager, etc.)
+- required schema is above
+Normalization
+
+Schools should be a controlled list (avoid “Hendersonville HS”, “HHS”, “Hville High” chaos).
+- all will be abbreviation or name from data 
+Job titles also need normalization or at least alias mapping.
+
+added consideration (mentioned in outline)
+Store last_imported_at and maybe per-record last_verified_at.
+
+TO-DO considerations:
+
+Define search modes:
+
+By name (partial, case-insensitive)
+
+By email/username
+
+By school
+
+By position/job family
+
+By phone/extension
+
+Fuzzy matching vs exact matching (be careful; fuzzy can return wrong people)
+
+And define output formatting:
+
+Minimal output (name, school, title) vs detailed view.

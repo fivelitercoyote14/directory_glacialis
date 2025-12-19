@@ -1,0 +1,8 @@
+write psudo code
+check if outline needs more detail or info 
+write user experince outline maybe
+create packages 
+outline packages 
+set up python virtual env 
+set up git ignore 
+create data model info text file 

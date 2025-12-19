@@ -1,32 +1,32 @@
-School IT technology Tracker 
-
- 
-
-Goal:  
-
-Cli tool of a schools computer inventory and user data 
-
-Select a school,  
-
-Menu will show a selection of data collections 
-
-Data collections include: 
-
-List of computers and users  
-
-Device and user reports  
-
-Search (search for computer names, user names or other strings)  
-
- 
-
-Actually  
-
- 
-
 Lets just do a massive directory, we already have Active Directory, but it sucks  
 
- 
+What is explicity is and does:
+- read only directory for quick and easy user look up and manual upkeep of this spicific tools database. 
+mainly for me as practice. the tool will only gain its data via import of data from a CSV. the CSV could 
+be an activedirectory export of all users or my copy of the HR list of all employees. The tool can
+use either the csv itself or a database built for the app to use as its directory database. the database
+can be built if needed and manually inserted with users if needed 
+This tool will not have any connections to active directory or a service we use. it is self 
+contained and isolated 
+Who this is for:
+me a pc tech who doesnt want to enter 4 menus to just verify the first.last spelling of a user
+on a call or in person 
+
+What problems does it solve better than AD?
+nothing it is  worse but its for me to not have to use active directory users and computers, 
+active directory admin center, sccm, or intune. those are sometimes such a pain to use. 
+I want a quick look up method i dont care if I need to manually update it either 
+
+development considerations and plans:
+for now we will use a fake set of people, say 100 made up users, all will have some 
+way to indetify that they are fake users, but I still want them to be in a real school, maybe 
+spread out over a few schools. also they should have varied and realistic names but 
+the positon will be the fake person identifier, fake positions will include:
+"wizard, witch, mage, knight, cleric, santa's_helper"
+NOT A SOURCE of Truth
+NOT A Essential tool for anyone else 
+
+actual task/prompt:
 
 Let’s make a python cli tool which will act as a directory for my organization.  
 
@@ -74,4 +74,21 @@ exit
 
 psudo code will be a seperate file 
 
- 
+further considerations:
+Store last_imported_at for sure and maybe per-record last_verified_at if decided to add later
+
+Decide: manual edits override imports or imports overwrite edits? manual edits override import
+
+Decide: do you keep “terminated” users as inactive (recommended for audit/history) or delete them?
+keep them as inactive then delete after a while maybe add an option to do that 
+
+other user permissions:
+read only for anyone else who decides they want to use this 
+I will be the admin for edits and changes but no one else will really use this
+edit justification will be a comment required 
+
+Where is the DB stored
+this is a tough one 
+for testing the database will be local only but updated via git if that is possible
+if not then thats fine, I can put a database in a shared file server or host it on a 
+pc i use if needed later on. 
